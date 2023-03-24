@@ -7,12 +7,19 @@ import { products } from '../products';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
+
+
 export class ProductListComponent {
-  products = products;
+  products = [...products];
 
   share(event: Event) {
     window.alert('The product has been shared! event=' + event);
   }
+
+  onNotify() {
+    window.alert("You will be notified when this product goes on sale..");
+  }
+
 }
 
 

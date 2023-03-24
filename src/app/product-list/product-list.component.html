@@ -21,6 +21,9 @@ can be found in the LICENSE file at https://angular.io/license
         <button type="button" (click)="share($event)">
             Share
         </button>
+
+        <app-product-alerts [currentProduct]="product" (notify)="onNotify()">
+        </app-product-alerts>
     </p>
     <p *ngIf="! product.description">
         Description: {{ "no description et tu" + 33 * 44 }}
