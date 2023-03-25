@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../products';
 
-
 @Component({
   selector: 'app-product-alerts',
   templateUrl: './product-alerts.component.html',
@@ -11,8 +10,8 @@ import { Product } from '../products';
 
 export class ProductAlertsComponent {
 
-  @Input() currentProduct: Product | undefined;
-  @Output() notify = new EventEmitter();
+  @Input() currentProduct?: Product;
+  @Output() notify2 = new EventEmitter();
 
   // notifyMe() {
   //   console.log("got notifyMe cb in ProductAlertsComponent..");
