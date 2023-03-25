@@ -1,0 +1,16 @@
+<p>cart works!</p>
+
+<div *ngFor="let product of cartContents">
+  <ul>
+    {{
+      product.name
+    }}
+    -
+    {{
+      product.description
+    }}
+    <br />
+    <span> {{ product.price | currency }} </span>
+    <hr />
+  </ul>
+</div>
