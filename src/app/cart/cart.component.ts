@@ -1,8 +1,15 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder } from "@angular/forms";
 import { CartService } from "../cart.service";
 import { Product } from "../products";
-import { FormBuilder } from "@angular/forms";
 
+/**
+ *
+ *
+ * @export
+ * @class CartComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: "app-cart",
   templateUrl: "./cart.component.html",
@@ -13,11 +20,22 @@ export class CartComponent implements OnInit {
 
   checkoutForm = this.formBuilder.group({ name: "", address: "" });
 
+  /**
+   * Creates an instance of CartComponent.
+   * @param {CartService} cartService
+   * @param {FormBuilder} formBuilder
+   * @memberof CartComponent
+   */
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder
   ) {}
 
+  /**
+   *
+   *
+   * @memberof CartComponent
+   */
   ngOnInit(): void {
     this.cartContents = this.cartService.getItems();
   }
